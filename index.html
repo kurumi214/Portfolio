@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div class="l-wrap">
@@ -13,14 +20,33 @@
             <!-- header -->
             <header class="l-header">
                 <div class="l-header-nav">
-                    <div class="l-header-nav-logo"></div>
-                    <div class="p-my-page-icon"></div>
-                    <ul class="l-header-nav-li">
-                        <li class="l-header-nav-item"></li>
-                        <li class="l-header-nav-item-btn"></li>
+                    <div class="l-header-nav-logo">
+                        <div class="p-my-page-icon"></div>
+                    </div>
 
-                        <li class="l-header-nav-price"></li>
-                        <li class="l-header-nav-more"></li>
+                    <ul class="l-header-nav-li">
+                        <li class="l-header-nav-item">
+                            <a href="#">はじめての方</a>
+                        </li>
+                        <li class="l-header-nav-item">
+                            <a href="#">サービス</a>
+                        </li>
+                        <li class="l-header-nav-item">
+                            <a href="#">メニュー</a>
+                        </li>
+
+                        <li class="l-header-nav-item-btn">
+                            <a href="#">あんしん保険</a>
+                        </li>
+                        <li class="l-header-nav-item-btn">
+                            <a href="#">企業様さま向け修理</a>
+                        </li>
+
+                        <li class="l-header-nav-price">
+                            <a href="#">イマスグお見積もり</a>
+                        </li>
+                        <li class="l-header-nav-more">
+                        </li>
                     </ul>
                 </div>
             </header>
@@ -28,28 +54,90 @@
             <!-- hero -->
             <div class="l-hero">
                 <div class="l-hero-swiper">
-                    <div class="l-hero-swiper-li">
+                    <div class="l-hero-swiper-container">
                         <div class="l-hero-notice"></div>
                     </div>
                 </div>
+
+                <!-- feature -->
                 <div class="l-hero-feature">
+                    <div class="l-hero-feature-copy">
                     <ul class="l-hero-feature-li">
                         <li class="l-hero-feature-item">
                             <div class="l-hero-feature-item-icon"></div>
-                            <div class="l-hero-feature-item-txt"></div>
+                            <div class="l-hero-feature-item-txt">
+                                <span>カンタン発送</span>
+                                <p>１週間でお届け！</p>
+                            </div>
+                        </li>
+                        <li class="l-hero-feature-item">
+                            <div class="l-hero-feature-item-icon"></div>
+                            <div class="l-hero-feature-item-txt">
+                                <span>修理スケジュールが見える！</span>
+                                <p>Myスケジュール</p>
+                            </div>
+                        </li>
+                        <li class="l-hero-feature-item">
+                            <div class="l-hero-feature-item-icon"></div>
+                            <div class="l-hero-feature-item-txt">
+                                <span>スマホ以外も！</span>
+                                <p>ゲーム機対応</p>
+                            </div>
+                        </li>
+                        <li class="l-hero-feature-item">
+                            <div class="l-hero-feature-item-icon"></div>
+                            <div class="l-hero-feature-item-txt">
+                                <span>合計修理台数</span>
+                                <p>１０万台以上！</p>
+                            </div>
                         </li>
                     </ul>
+                </div>
                 </div>
             </div>
 
             <!-- news -->
             <div class="l-news">
-                <div class="l-news-btn"></div>
-                <div class="l-news-ttl"></div>
+                <div class="l-news-btn">
+                    <a href="#">NEWS一覧へ</a>
+                </div>
+
+                <div class="l-news-ttl">NEWS</div>
                 <ul class="l-news-article-li">
                     <li class="l-news-article-item">
-                        <div class="l-news-article-item-date"></div>
-                        <div class="l-news-article-item-txt"></div>
+                        <div class="l-news-article-item-date">
+                            2024.1.1
+                        </div>
+                        <div class="l-news-article-item-txt">
+                            2024年もよろしくお願いいたします!
+                        </div>
+                        <div class="l-news-article-item-more"></div>
+                    </li>
+                    <li class="l-news-article-item">
+                        <div class="l-news-article-item-date">
+                            2024.2.12
+                        </div>
+                        <div class="l-news-article-item-txt">
+                            キャンペーン第２弾開催!
+                        </div>
+                        <div class="l-news-article-item-more"></div>
+                    </li>
+                    <li class="l-news-article-item">
+                        <div class="l-news-article-item-date">
+                            2024.3.13
+                        </div>
+                        <div class="l-news-article-item-txt">
+                            ゲーム機器の修理を開始します!
+                        </div>
+                        <div class="l-news-article-item-more"></div>
+                    </li>
+                    <li class="l-news-article-item">
+                        <div class="l-news-article-item-date">
+                            2024.4.14
+                        </div>
+                        <div class="l-news-article-item-txt">
+                            デバイストラブルのランキングを発表します!
+                        </div>
                         <div class="l-news-article-item-more"></div>
                     </li>
                 </ul>
@@ -60,13 +148,494 @@
             <div class="l-problem">
                 <div class="l-problem-container">
                     <div class="l-problem-col">
-                        <div class="l-problem-col-txt"></div>
-                        <div class=".l-problem-col-img"></div>
+                        <div class="l-problem-col-txt">
+                            修理に出したいけど<br>
+                            なかなか行けない方<br>
+                            いませんか？
+                        </div>
+                        <div class="l-problem-col-img"></div>
+                    </div>
+                    <div class="l-problem-col">
+                        <div class="l-problem-col-txt">
+                            画面が割れてしまった<br>
+                            リモコンのボタンが効かなくなった
+                        </div>
+                        <div class="l-problem-col-img"></div>
+                    </div>
+                    <div class="l-problem-col">
+                        <div class="l-problem-col-txt">
+                            忙しくて時間がない！<br>
+                            すぐに修理を終わらせたい
+                        </div>
+                        <div class="l-problem-col-img"></div>
+                    </div>
+                    <div class="l-problem-col">
+                        <div class="l-problem-col-txt">
+                            近所に修理店がない<br>
+                            わざわざ店舗に行くのは面倒
+                        </div>
+                        <div class="l-problem-col-img"></div>
+                    </div>
+                    <div class="l-problem-col">
+                        <div class="l-problem-col-txt">
+                            何台か修理に出したいけど<br>
+                            重くて持っていくのが大変
+                        </div>
+                        <div class="l-problem-col-img"></div>
+                    </div>
+                    <div class="l-problem-col">
+                        <div class="l-problem-col-txt">
+                            大事なデータを残したい！復旧したい！<br>
+                            自分でするのは怖いので、プロに任せたい
+                        </div>
+                        <div class="l-problem-col-img"></div>
                     </div>
                 </div>
             </div>
 
+            <!-- banner1 -->
+            <div class="c-link-bnr">
+                <div class="c-link-bnr-copy">
+                    ムズカシイ手続きはいっさいナシで<br>
+                    修理ができる！
+                </div>
+                <div class="c-link-bnr-txt">
+                    修理が簡単で安心なサービス。<br>
+                    郵送キットが到着したら、修理を手続きするだけ。<br>
+                    進捗はいつでも確認できます。
+                </div>
+            </div>
             
+            <!-- service -->
+            <div class="l-service">
+                <div class="c-title">
+                    Service
+                    <span>スマホ修理はもちろん、他にも様々なサービスを展開しています</span>
+                </div>
+                <div class="l-service-container">
+                    <div class="l-service-col">
+                        <div class="l-service-icon"></div>
+                        <div class="l-service-col-txt">
+                            スマートフォン<br>
+                            修理
+                        </div>
+                    </div>
+                    <div class="l-service-col">
+                        <div class="l-service-icon"></div>
+                        <div class="l-service-col-txt">
+                            タブレット<br>
+                            修理
+                        </div>
+                    </div>
+                    <div class="l-service-col">
+                        <div class="l-service-icon"></div>
+                        <div class="l-service-col-txt">
+                            スクリーン補強<br>
+                            加工
+                        </div>
+                    </div>
+                    <div class="l-service-col">
+                        <div class="l-service-icon"></div>
+                        <div class="l-service-col-txt">
+                            保護フィルム<br>
+                            販売
+                        </div>
+                    </div>
+                    <div class="l-service-col">
+                        <div class="l-service-icon"></div>
+                        <div class="l-service-col-txt">
+                            大事なデータの<br>
+                            復旧
+                        </div>
+                    </div>
+                    <div class="l-service-col">
+                        <div class="l-service-icon"></div>
+                        <div class="l-service-col-txt">
+                            ケースや<br>
+                            アクセサリー
+                        </div>
+                    </div>
+                    <div class="l-service-col">
+                        <div class="l-service-icon"></div>
+                        <div class="l-service-col-txt">
+                            Android<br>
+                            修理
+                        </div>
+                    </div>
+                    <div class="l-service-col">
+                        <div class="l-service-icon"></div>
+                        <div class="l-service-col-txt">
+                            出張修理
+                        </div>
+                    </div>
+                    <div class="l-service-col">
+                        <div class="l-service-icon"></div>
+                        <div class="l-service-col-txt">
+                            スマートフォン<br>
+                            修理
+                        </div>
+                    </div>
+                    <div class="l-service-col">
+                        <div class="l-service-icon"></div>
+                        <div class="l-service-col-txt">
+                            ゲーム機器<br>
+                            修理
+                        </div>
+                    </div>  
+                </div>
+            </div>
+
+            <!-- feature -->
+            <div class="l-feature">
+                <div class="c-title">
+                    Feature
+                    <span>発送や修理中のサポートもバッチリ</span>
+                </div>
+
+                <div class="l-feature-container">
+                    <div class="l-feature-col">
+                        <div class="l-feature-col-num">1</div>
+                        <div class="l-feature-col-img"></div>
+                        <div class="l-feature-col-ttl">
+                            簡単見積もりで<br>
+                            合計の料金も明確！
+                        </div>
+                        <div class="l-feature-col-txt">
+                            質問に答えるだけで、<br>
+                            修理にかかる料金と日数が分かります。<br>
+                            送料や修理代もすべて込みのお見積り。<br>
+                            シンプルな料金設定です。<br>
+                        </div>
+                    </div>
+                    <div class="l-feature-col">
+                        <div class="l-feature-col-num">2</div>
+                        <div class="l-feature-col-img"></div>
+                        <div class="l-feature-col-ttl">
+                            発送セットで送るだけ！<br>
+                            梱包の用意はナシ！
+                        </div>
+                        <div class="l-feature-col-txt">
+                            修理依頼後、送られてくる発送セットには、<br>
+                            クッション封筒、記入済みの伝票、<br>
+                            必要な書類はすべて同封されています<br>
+                        </div>
+                    </div>
+                    <div class="l-feature-col">
+                        <div class="l-feature-col-num">3</div>
+                        <div class="l-feature-col-img"></div>
+                        <div class="l-feature-col-ttl">
+                            Myページで<br>
+                            修理状況を見れる！
+                        </div>
+                        <div class="l-feature-col-txt">
+                            お客さま専用のMyページでは、<br>
+                            修理の様子を共有するので、安心して見守ることができます。<br>
+                            またメッセージ機能で担当者とご相談も可能！<br>
+                        </div>
+                    </div>
+                    <div class="l-feature-col">
+                        <div class="l-feature-col-num">3</div>
+                        <div class="l-feature-col-img"></div>
+                        <div class="l-feature-col-ttl">
+                            あんしんの<br>
+                            アフターサービスも！
+                        </div>
+                        <div class="l-feature-col-txt">
+                            修理が完了した端末には<br>
+                            1週間の保証がつきます。<br>
+                            さらに保証を延長すると最大3ヶ月までを保証。<br>
+                        </div>
+                    </div>
+                    <div class="l-feature-col">
+                        <div class="l-feature-col-num">3</div>
+                        <div class="l-feature-col-img"></div>
+                        <div class="l-feature-col-ttl">
+                            店舗も続々<br>
+                            オープン中！
+                        </div>
+                        <div class="l-feature-col-txt">
+                            大型ショッピングモールに実店舗を7店舗運営。<br>
+                            全国展開ならではの部品提供でコストダウンを追求。<br>
+                            お客様からの嬉しいお声もたくさん届いております！<br>
+                        </div>
+                    </div>
+                    <div class="l-feature-col">
+                        <div class="l-feature-col-num">3</div>
+                        <div class="l-feature-col-img"></div>
+                        <div class="l-feature-col-ttl">
+                            データはそのままで大丈夫<br>
+                            写真やチャットの履歴も残せます
+                        </div>
+                        <div class="l-feature-col-txt">
+                            初期化せずに修理ができるので、<br>
+                            データのバックアップなどの手間が省けます。<br>
+                            大切な思い出の写真、メッセージのやり取りを残しておけます<br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- link btn -->
+            <div class="c-link-btn">
+                <div class="c-link-btn-txt">
+                    <a href="#">サービスをもっと見る</a>
+                </div>
+                <div class="c-link-btn-arrow"></div>
+            </div>
+
+            <!-- flow -->
+            <div class="l-flow">
+                <div class="c-title">
+                    Flow
+                    <span>発送までの流れ</span>
+                </div>
+                <div class="l-flow-container">
+                    <div class="l-flow-col">
+                        <div class="l-flow-col-arrow"></div>
+                        <div class="l-flow-col-inner">
+                            <div class="l-flow-col-icon"></div>
+                            <div class="l-flow-col-title">
+                                1.修理を依頼
+                            </div>
+                            <div class="l-flow-col-txt">
+                                簡単見積もりの後、そのままご依頼いただけます。<span>カンタン料金案内はこちら</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l-flow-col">
+                        <div class="l-flow-col-arrow"></div>
+                        <div class="l-flow-col-inner">
+                            <div class="l-flow-col-icon"></div>
+                            <div class="l-flow-col-title">
+                                2.発送する
+                            </div>
+                            <div class="l-flow-col-txt">
+                                修理を依頼後、送られてくる発送セットに端末を梱包し、郵便局・コンビニからご発送ください。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l-flow-col">
+                        <div class="l-flow-col-arrow"></div>
+                        <div class="l-flow-col-inner">
+                            <div class="l-flow-col-icon"></div>
+                            <div class="l-flow-col-title">
+                                3. 決済・修理
+                            </div>
+                            <div class="l-flow-col-txt">
+                                ご相談のうえ、修理メニューを選択。決済確認後に修理を開始します。
+                            </div>
+                        </div>
+                    </div>
+                    <div class="l-flow-col">
+                        <div class="l-flow-col-arrow"></div>
+                        <div class="l-flow-col-inner">
+                            <div class="l-flow-col-icon"></div>
+                            <div class="l-flow-col-title">
+                                4. 端末の返送
+                            </div>
+                            <div class="l-flow-col-txt">
+                                修理が完了次第、お客さまの元へ返送いたします。送料は発送も返送もすべて無料です。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- banner2 -->
+            <div class="c-link-bnr">
+                <div class="c-link-bnr-copy">
+                    料金とサービスを<br>
+                    ぜひご覧ください
+                </div>
+                <div class="c-link-bnr-txt">
+                    端末の種類や、修理したい箇所を選択するだけで<br>
+                    お見積り料金がスグに表示されます！
+                </div>
+                <div class="c-link-btn-white">
+                    <p>１分で完了</p>
+                    <div class="c-link-btn-white-inner">
+                        <div class="c-link-btn-white-txt">
+                            簡単お見積もり
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- result -->
+            <div class="l-result">
+                <div class="c-title">
+                    Result
+                    <span>今までの修理キロク</span>
+                </div>
+                <div class="l-result-swiper">
+                    <div class="-result-swiper-item">
+                        <div class="l-result-swiper-btn-prev"></div>
+                        <div class="l-result-swiper-btn-next"></div>
+                        <div class="l-result-page"></div>
+                    </div>
+                    <div class="l-result-col">
+                        <a href="#">
+                            <div class="l-result-date">
+                                2024<br>
+                                01.20
+                            </div>
+                            <div class="l-result-col-img"></div>
+                            <div class="l-result-col-arrow"></div>
+                            <div class="l-result-col-ttl">
+                                画面が割れてしまったスマホを修理させていただきました
+                            </div>
+                            <div class="l-result-col-txt">
+                                １度目の落下で画面ガラスが割れてしまい、
+                                ２度目の落下で画面と基板を繋ぐケーブルが切れてしまい
+                                画面が取れたアイフォン１１
+                                の修理となります！
+                            </div>
+                        </a>
+                    </div>
+                    <div class="l-result-col">
+                        <a href="#">
+                            <div class="l-result-date">
+                                2024<br>
+                                02.12
+                            </div>
+                            <div class="l-result-col-img"></div>
+                            <div class="l-result-col-arrow"></div>
+                            <div class="l-result-col-ttl">
+                                どんなに画面がバキバキでも諦めないでください！
+                            </div>
+                            <div class="l-result-col-txt">
+                                iPhoneをナビ代わりにバイクにつけられていたそうですが、
+                                固定が甘かったのか走っている最中に落ちてしまい、
+                                さらにさらに運悪く後続の車にまで轢かれてしまったそうで、、、
+                            </div>
+                        </a>
+                    </div>
+                    <div class="l-result-col">
+                        <a href="#">
+                            <div class="l-result-date">
+                                2024<br>
+                                03.20
+                            </div>
+                            <div class="l-result-col-img"></div>
+                            <div class="l-result-col-arrow"></div>
+                            <div class="l-result-col-ttl">
+                                液晶の表示不良もお任せください
+                            </div>
+                            <div class="l-result-col-txt">
+                                液晶の表示不良は液晶交換で直ることがほとんどです（稀に基板に問題がある場合もありますが。。）
+                                今回作業させて頂いたお客様の
+                                液晶表示不良のタブレットは液晶交換で綺麗に元通りでございます！
+                            </div>
+                        </a>
+                    </div>
+                    <div class="l-result-col">
+                        <a href="#">
+                            <div class="l-result-date">
+                                2024<br>
+                                04.28
+                            </div>
+                            <div class="l-result-col-img"></div>
+                            <div class="l-result-col-arrow"></div>
+                            <div class="l-result-col-ttl">
+                                充電できなくなってしまっても修理可能です！
+                            </div>
+                            <div class="l-result-col-txt">
+                                今回のお客様は充電ができないことに加え、バッテリーの減りも気になられていたので、
+                                一緒に交換ご依頼を頂戴いたしました！！
+                                上の写真を見ても最大容量が75％とかなり劣化しており、
+                                重要なメッセージも表示されていおりました。
+                            </div>
+                        </a>
+                    </div>
+                    <div class="l-result-col">
+                        <a href="#">
+                            <div class="l-result-date">
+                                2024<br>
+                                01.20
+                            </div>
+                            <div class="l-result-col-img"></div>
+                            <div class="l-result-col-arrow"></div>
+                            <div class="l-result-col-ttl">
+                                バッテリー交換もお任せください！
+                            </div>
+                            <div class="l-result-col-txt">
+                                XperiaやGalaxy、Googleピクセル、AQUOS、ASUS、HUAWEI、OPPOなど
+                                画面修理やバッテリー交換、基板入替による修理などお受けいたしております！
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- link btn -->
+            <div class="c-link-btn">
+                <div class="c-link-btn-txt">
+                    <a href="#">もっと実績を見る</a>
+                </div>
+                <div class="c-link-btn-arrow"></div>
+            </div>
+
+            <!-- copy -->
+            <div class="p-copy">
+                <div class="p-copy-lead"></div>
+                <div class="p-copy-txt"></div>
+            </div>
+
+            <!-- footer -->
+            <div class="l-footer-container">
+                <div class="l-footer-menu">
+                    <div class="l-footer-menu-col">
+                        <div class="l-footer-menu-col-arrow"></div>
+                        <div class="l-footer-menu-col-ttl">
+                            <span></span>
+                        </div>
+                        <ul class="l-footer-menu-col-li">
+                            <li class="l-footer-menu-col-li-item"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="l-footer-menu">
+                    <div class="l-footer-menu-col">
+                        <div class="l-footer-menu-col-arrow"></div>
+                        <div class="l-footer-menu-col-ttl">
+                            <span></span>
+                        </div>
+                        <ul class="l-footer-menu-col-li">
+                            <li class="l-footer-menu-col-li-item"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="l-footer-menu">
+                    <div class="l-footer-menu-col">
+                        <div class="l-footer-menu-col-arrow"></div>
+                        <div class="l-footer-menu-col-ttl">
+                            <span></span>
+                        </div>
+                        <ul class="l-footer-menu-col-li">
+                            <li class="l-footer-menu-col-li-item"></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="l-footer-menu-col-last">
+                    <ul class="l-footer-menu-col-li">
+                        <li class="l-footer-menu-col-li-item"></li>
+                        <li class="l-footer-menu-col-li-item"></li>
+                        <li class="l-footer-menu-col-li-item"></li>
+                        <li class="l-footer-menu-col-li-item"></li>
+                        <div class="l-footer-menu-col-img"></div>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="p-footer">
+                <div class="p-footer-item">
+                    <div class="p-footer-logo"></div>
+                    <div class="p-footer-icon"></div>
+                    <div class="p-footer-icon"></div>
+                    <div class="p-footer-icon"></div>
+                </div>
+                <small></small>
+            </div>
         </div>
     </div>
     
