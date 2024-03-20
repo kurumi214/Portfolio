@@ -766,9 +766,6 @@
      box-sizing: border-box;
  }
  /* inline elements */
- u, ins {
-     text-decoration: underline
- }
  strong, b {
      font-weight: bold
  }
@@ -837,8 +834,6 @@
  }
      
  a:-webkit-any-link {
-     color: -webkit-link;
-     text-decoration: underline;
      cursor: auto;
  }
  a:-webkit-any-link:active {
