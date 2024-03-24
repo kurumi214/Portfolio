@@ -520,9 +520,6 @@ html {
      object-fit: cover;
 }
 
-.p-copy {
-  height: 1000px;
-}
 .p-copy-lead {
   font-size: 100px;
   font-weight: 900;
