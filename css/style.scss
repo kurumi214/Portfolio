@@ -72,7 +72,7 @@ html {
     &-txt {
         display: flex;
         align-items: center;
-        color: #000;
+        color: #000;　
         span {
             margin-right: 30px;
             font-size: 20px;
@@ -127,6 +127,7 @@ html {
     }
 }
 .c-my-page-login {
+    cursor: pointer;
     margin-left: 20px;
     img {
         object-fit: contain;
@@ -135,6 +136,9 @@ html {
     span {
         display: block;
         font-size: 10px;
+        &:hover {
+            color: #2da559;
+        }
     }
 }
 // header nav
@@ -142,24 +146,50 @@ html {
     height: 90px;
     border-bottom: 1px solid black;
     display: flex;
+    
     &-nav {
         width: 100%;
         padding: 10px 310px 10px 40px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-
     }
+
     &-logo {
         display: flex;
     }
+
     &-nav-li {
         margin: 0;
         display: flex;
         align-items: center;
         font-size: 14px;
+
         &-item {
             margin-right: 10px;
+
+            a {
+                cursor: pointer;
+                position: relative;
+                display: inline-block;
+                -webkit-perspective: 1000px;
+                perspective: 1000px;
+                -webkit-perspective-origin: 50% 50%;
+                perspective-origin: 50% 50%;
+                vertical-align: bottom;
+                overflow: hidden;
+
+                span {
+                    display: inline-block;
+                    position: relative;
+                    transition: .4s;
+                    -webkit-transform-origin: 50% 0%;
+                    transform-origin: 50% 0%;
+                    -webkit-transform-style: preserve-3d;
+                    transform-style: preserve-3d;
+                }
+            }
+
             &-btn {
                 margin-right: 10px;
                 border: 1px solid black; 
@@ -170,6 +200,29 @@ html {
         }
     }
 }
+
+.l-header-nav-li-item {
+    a {
+        span {
+            &:hover {
+                -webkit-transform: translate3d(0, 0, -30px) rotateX(90deg);
+                transform: translate3d(0, 0, -30px) rotateX(90deg);
+            }
+            &::after {
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                content: attr(data-text);
+                -webkit-transform-origin: 50% 0%;
+                transform-origin: 50% 0%;
+                -webkit-transform: translate3d(0, 105%, 0) rotateX(-90deg);
+                transform: translate3d(0, 105%, 0) rotateX(-90deg);
+            }
+        }
+    }
+}
+
 
 .l-nav-more {
     z-index: 100;
@@ -217,8 +270,9 @@ html {
     display: flex; 
     overflow: hidden; 
     margin: 0 auto; 
+    width: 100vw;
     img {
-        width: 100%;
+        width: 100vw;
         object-fit: fill;
         margin: 0;
         padding: 0;
@@ -226,15 +280,11 @@ html {
     }
 }
 @keyframes scroll {
-    0% { margin-left: 0; }   
-    20% { margin-left: -100%; }
-    25% { margin-left: -100%; }
-    45% { margin-left: -200%; }
-    50% { margin-left: -200%; }
-    70% { margin-left: -300%; }
-    75% { margin-left: -300%; }
-    95% { margin-left: -400%; }
-    100% { margin-left: -400%; }
+    0% { margin-left: 0; }
+    12% { margin-left: -100vw; }
+    45% { margin-left: -200vw; }    
+    78% { margin-left: -300vw; }
+    100% { margin-left: -400vw; }
 }
 .l-hero-carousel> :first-child {
     animation-name: scroll;
@@ -287,6 +337,25 @@ html {
 }
 
 ////// news//////
+/// 
+@keyframes newsSlideIn {
+    from {
+        transform: translateY(200%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes newsSlideOut {
+    from {
+        transform: translateY(0%);
+    }
+    to {
+        transform: translateY(-200%);
+    }
+}
+
 .l-news {
     background-color: #f2f2f2;
     padding: 60px;
@@ -303,6 +372,7 @@ html {
         width: 100%;
         display: flex;
         align-items: center;
+        overflow: hidden;
     }
     &-ttl {
         font-size: 26px;
@@ -315,15 +385,39 @@ html {
         font-size: 20px;
         &-slide {
             display: flex;
+            transition: color 0.3s; 
+            animation: newsSlideIn linear;
+            animation-duration: 1s;
+
             &-txt {
                 margin-left: 25px;
             }
+            &-more {
+                height: 24px;
+                width: 24px;
+                &::after{
+                    content: "";
+                    margin-left: 2em;
+                    height: 24px;
+                    width: 24px;
+                    mask: center/contain no-repeat;
+                    mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNS4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTQzOC42IDI3OC42YzEyLjUtMTIuNSAxMi41LTMyLjggMC00NS4zbC0xNjAtMTYwYy0xMi41LTEyLjUtMzIuOC0xMi41LTQ1LjMgMHMtMTIuNSAzMi44IDAgNDUuM0wzMzguOCAyMjQgMzIgMjI0Yy0xNy43IDAtMzIgMTQuMy0zMiAzMnMxNC4zIDMyIDMyIDMybDMwNi43IDBMMjMzLjQgMzkzLjRjLTEyLjUgMTIuNS0xMi41IDMyLjggMCA0NS4zczMyLjggMTIuNSA0NS4zIDBsMTYwLTE2MHoiLz48L3N2Zz4=");
+                    background-color: black;
+                    display: block;
+
+                    transition: all 0.3s;
+                }
+            }
         }
-        .l-news-article-slide {
-            transition: color 0.3s; 
+        &:hover .l-news-article-slide-more::after {
+            background-color: #2da559;
         }
         &:hover .l-news-article-slide {
-            color: #367E18;
+            color: #2da559;
+        }
+        &:hover .l-news-article-slide-more {
+            stroke: #2da559 !important;
+            fill: #2da559 !important;
         }
     }
     &-page {
@@ -331,6 +425,7 @@ html {
         font-weight: 900;
     }
 }
+
 
 ////// problem//////
 .l-problem {
@@ -571,5 +666,40 @@ html {
                 line-height: 2;
             }
         }
+    }
+}
+/// 
+.p-footer {
+    display: flex;
+    background-color: #f2f2f2;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 40px 60px;
+    &-item {
+        display: flex;
+        flex-direction: column;        
+    }
+    &-icon {
+        height: 24px;
+        width: 24px;
+        transition: opacity 0.3s ease-in-out;
+        cursor: pointer;
+
+        img {
+            width: 100%;
+        }
+        &:hover {
+            opacity: 0.6;
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    small {
+        font-weight: 600;
+        display: flex;
+        align-items: flex-end;
     }
 }
