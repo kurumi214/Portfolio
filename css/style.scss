@@ -1,6 +1,7 @@
 ////// base////// 
 .l-wrap {
     margin: 0 auto;
+    overflow: hidden;
 }
 a {
     text-decoration: none;
@@ -365,6 +366,7 @@ html {
         text-decoration: none;
         border-radius: 30px;
         font-size: 14px;
+        margin-left: auto;
     }
     &-container {
         margin-top: 30px;
@@ -428,6 +430,8 @@ html {
 
 ////// problem//////
 .l-problem {
+    outline: 1px solid  rgb(137, 137, 137); 
+    outline-offset: -1px;
     &-container {
         display: grid;
         grid-template-columns: repeat(3, calc(100vw / 3));
@@ -560,6 +564,7 @@ html {
             margin: 0 auto;
             height: 102px;
             object-fit: contain;
+            width: 100%;
         }
     }
 }
@@ -569,11 +574,12 @@ html {
     margin-top: 60px;
     padding-top: 60px;
     &-container {
+        gap: 50px;
         display: flex;
         padding-bottom: 30px;
         border-top: 1px solid black;
         border-bottom: 1px solid black;
-        display: flex;
+        position: relative;
     }
     &-parts {
         margin: 50vh 0 0 1vw;
@@ -601,16 +607,17 @@ html {
         font-size: 26px;
     }
     &-col {
+        width: 365px;
+        max-width: 365px;
+
+        &:first-child {
+            position: absolute;
+            height: 100%;
+            width: 200px;
+            background-color: white;
+        }
         &-date {
-            margin-top: 20px;
-        }
-        &-ttl {
-            margin-top: 40px;
-            font-weight: 600;
-            font-size: 20px;
-        }
-        &-arrow {
-            height: 20px;
+            margin: 20px 20px 0 0;
         }
         &-top {
             display: flex;
@@ -620,6 +627,19 @@ html {
                 object-fit: cover;
             }
         }
+        &-arrow {
+            height: 20px;
+        }
+        &-ttl {
+            margin-top: 40px;
+            font-weight: 600;
+            font-size: 20px;
+        }
+        &-txt {
+            margin-top: 20px;
+            width: 80%;
+            float: right;
+        }
     }
 }
 
@@ -628,16 +648,14 @@ html {
     &-lead {
         font-size: 100px;
         font-weight: 900;
-
         width: 141%;
-        
         transform: translateX(-100%);
-
         animation: animationCopyLead linear;
         animation-timeline: view();
         animation-range: -50% 50%;
     }
     &-txt {
+        margin: 40px 0 100px 80px;
         font-size: 25px;
         font-weight: 600;
     }
@@ -657,11 +675,12 @@ html {
     background-color: #f2f2f2;
     &-menu {
         display: flex;
+
         &-col {
-            padding: 60px 0 0 20px;
+            padding: 60px 0 0 60px;
+            min-width: calc(100% / 4) ;
             &-ttl {
                 span {
-                    padding-left: 40px;
                     color: #7d7c7c;
                 }
             }
@@ -670,11 +689,17 @@ html {
                 align-items: center;
                 font-size: 30px;
                 &-arrow {
-                    margin-right: 10px;
+                    position: absolute;
+                    transform: translateX(-30px);
                 }
             }
             &-li {
                 line-height: 2;
+            }
+            ul  {
+                margin: 0;
+                padding: 0;
+                -webkit-padding-start: 0;
             }
         }
     }
@@ -686,9 +711,13 @@ html {
     flex-direction: row;
     justify-content: space-between;
     padding: 40px 60px;
+    &-logo img {
+        width: 65%;
+    }
     &-item {
         display: flex;
-        flex-direction: column;        
+        gap: 3em;   
+        align-items: center;
     }
     &-icon {
         height: 24px;
@@ -706,6 +735,7 @@ html {
         &-list {
             display: flex;
             flex-direction: row;
+            gap: 1em;
         }
     }
     small {
