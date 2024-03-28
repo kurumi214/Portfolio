@@ -64,7 +64,7 @@ const resultList = [
 
 
 
-window.addEventListener("DOMContentLoaded", (e) => {
+window.addEventListener("DOMContentLoaded", (e) =>  {
     let newsCounter = 0
     let currentResult = 0
 
@@ -72,7 +72,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
         currentResult++
         if (currentResult > (resultList.length - 1))
             currentResult = 0
-        document.getElementById("result-0").style = "margin-left: " + (200 + -currentResult * (365 + 50)) + "px;"
+        document.getElementById("result-0").style = "margin-left: " + (250 + -currentResult * (365 + 50) - 1) + "px;"
         document.getElementsByClassName("l-result-page")[0].
         innerHTML = (1 + currentResult) + "/" + resultList.length 
     }
@@ -80,7 +80,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
         currentResult--
         if (currentResult < 0)
             currentResult = (resultList.length - 1)
-        document.getElementById("result-0").style = "margin-left: " + (200 + -currentResult * (365 + 50)) + "px;"
+        document.getElementById("result-0").style = "margin-left: " + (250 + -currentResult * (365 + 50) - 1) + "px;"
         document.getElementsByClassName("l-result-page")[0].
         innerHTML = (1 + currentResult) + "/" + resultList.length 
     }
@@ -89,7 +89,7 @@ window.addEventListener("DOMContentLoaded", (e) => {
     resultList.map((result, index) => {
         let style = ""
         if (index === 0) {
-            style = ` style="margin-left: 200px;"`
+            style = ` style="margin-left: 250px;"`
         }
 
         document.getElementsByClassName("l-result-container")[0].
@@ -104,7 +104,6 @@ window.addEventListener("DOMContentLoaded", (e) => {
             </div>
             <a href="#">
                 <div class="l-result-col-ttl">
-                    <img class="l-result-col-arrow" src="./images/icon/arrow-right-black.svg" alt="矢印">
                     ` + result.title +`
                 </div>
             </a>
@@ -142,3 +141,18 @@ window.addEventListener("DOMContentLoaded", (e) => {
         }, 500)
     }, 3000)
 })
+
+/////////////
+window.onscroll = (e) => {
+    const windowHeight = window.innerHeight
+    const textRect = document.getElementsByClassName("p-copy-lead")[0].getBoundingClientRect()
+
+    if (windowHeight >= textRect.top) {
+        let diff = windowHeight - textRect.top
+        let progress = 100 -  diff * 300 / windowHeight
+        document.getElementsByClassName("p-copy-lead")[0].style = "transform: translateX(" + progress + "%)"
+    } else {
+        document.getElementsByClassName("p-copy-lead")[0].style = "transform: translateX(100%)"
+    }
+
+}

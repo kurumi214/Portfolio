@@ -6,6 +6,10 @@
 a {
     text-decoration: none;
     color: black;
+    cursor: pointer;
+    &:active {
+        color: unset !important
+    }
 }
 body {
     margin: 0 ;
@@ -245,6 +249,7 @@ html {
     &-menu {
         width: 90px;
         height: 90px;
+        flex-direction: column;
         text-align: center;
         display: flex;
         justify-content: center;
@@ -253,14 +258,25 @@ html {
         background-color: white;
         border-bottom: 1px solid black;
         border-left: 1px solid black;
+        &:hover{
+            span {
+                width: 45px;
+                border: 1px solid black;
+                border-radius: 0;
+            }
+        }
         span {
+            transition: all cubic-bezier(0.34,1.56,0.64,1) .3s;
+            margin-bottom: 10px;
             display: inline-block;
             line-height: 1;
-            width: 0.25em;
-            height: 0.25em;
+            width: 0.2em;
+            height: 0.2em;
             background: currentColor;
             border-radius: 50%;
-            box-shadow: 0 -0.375em 0 0 currentColor, 0 0.375em 0 0 currentColor;
+        }
+        & span:last-child {
+            margin-bottom: 0;
         }
     }
 }
@@ -581,40 +597,62 @@ html {
         border-bottom: 1px solid black;
         position: relative;
     }
-    &-parts {
-        margin: 50vh 0 0 1vw;
-        width: 200px;
-        top: 70%;
-        left: 20%; 
-    }
     &-btn {
         &-next {
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
             height: 50px;
+            width: 50px;
             margin-bottom: 10px;
             background-size: 50px;
             background-image: url(../images/icon/arrow-right-circle.svg);
             background-repeat: no-repeat;
+            &:hover {
+                transform: scale(1.4);
+            }
         }
         &-prev {
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
             height: 50px;
+            width: 50px;
             margin-bottom: 10px;
             background-size: 50px;
             background-image: url(../images/icon/arrow-left-circle.svg);
             background-repeat: no-repeat;
+            &:hover {
+                transform: scale(1.4);
+            }
         }
     }
     &-page {
         font-size: 26px;
+        display: inline-block;
     }
     &-col {
         width: 365px;
         max-width: 365px;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover a {
+            color: #2da559;
+        }
+        &:hover .l-result-col-ttl::before {
+            background-color: #2da559;
+        }
 
         &:first-child {
+            cursor: unset;
             position: absolute;
             height: 100%;
             width: 200px;
             background-color: white;
+            border-right: 1px solid black;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            padding-bottom: 6em;
         }
         &-date {
             margin: 20px 20px 0 0;
@@ -634,6 +672,18 @@ html {
             margin-top: 40px;
             font-weight: 600;
             font-size: 20px;
+            transition: all 0.3s;
+            &::before{
+                content: "";
+                height: 20px;
+                width: 20px;
+                mask: center/contain no-repeat;
+                mask-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0NDggNTEyIj48IS0tIUZvbnQgQXdlc29tZSBGcmVlIDYuNS4xIGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlL2ZyZWUgQ29weXJpZ2h0IDIwMjQgRm9udGljb25zLCBJbmMuLS0+PHBhdGggZD0iTTQzOC42IDI3OC42YzEyLjUtMTIuNSAxMi41LTMyLjggMC00NS4zbC0xNjAtMTYwYy0xMi41LTEyLjUtMzIuOC0xMi41LTQ1LjMgMHMtMTIuNSAzMi44IDAgNDUuM0wzMzguOCAyMjQgMzIgMjI0Yy0xNy43IDAtMzIgMTQuMy0zMiAzMnMxNC4zIDMyIDMyIDMybDMwNi43IDBMMjMzLjQgMzkzLjRjLTEyLjUgMTIuNS0xMi41IDMyLjggMCA0NS4zczMyLjggMTIuNSA0NS4zIDBsMTYwLTE2MHoiLz48L3N2Zz4=");
+                background-color: black;
+                display: inline-block;
+
+                transition: all 0.3s;
+            }
         }
         &-txt {
             margin-top: 20px;
@@ -646,13 +696,10 @@ html {
 ////// copy//////
 .p-copy {
     &-lead {
-        font-size: 100px;
+        font-size: 140px;
         font-weight: 900;
-        width: 141%;
-        transform: translateX(-100%);
-        animation: animationCopyLead linear;
-        animation-timeline: view();
-        animation-range: -50% 50%;
+        width: max-content;
+        transition: all ease-in-out;
     }
     &-txt {
         margin: 40px 0 100px 80px;
@@ -661,14 +708,6 @@ html {
     }
 }
 
-@keyframes animationCopyLead {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(100%);
-    }
-}
 
 ////// footer//////
 .l-footer {
