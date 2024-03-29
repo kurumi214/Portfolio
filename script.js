@@ -68,11 +68,18 @@ window.addEventListener("DOMContentLoaded", (e) =>  {
     let newsCounter = 0
     let currentResult = 0
 
+
+    let getResultMargin = () => {
+        if (window.innerWidth < 767)
+            return 0
+        return 250
+    }
+
     document.onNextBtn = () => {
         currentResult++
         if (currentResult > (resultList.length - 1))
             currentResult = 0
-        document.getElementById("result-0").style = "margin-left: " + (250 + -currentResult * (365 + 50) - 1) + "px;"
+        document.getElementById("result-0").style = "margin-left: " + (getResultMargin() + -currentResult * (365 + 50) - 1) + "px;"
         document.getElementsByClassName("l-result-page")[0].
         innerHTML = (1 + currentResult) + "/" + resultList.length 
     }
@@ -80,7 +87,7 @@ window.addEventListener("DOMContentLoaded", (e) =>  {
         currentResult--
         if (currentResult < 0)
             currentResult = (resultList.length - 1)
-        document.getElementById("result-0").style = "margin-left: " + (250 + -currentResult * (365 + 50) - 1) + "px;"
+        document.getElementById("result-0").style = "margin-left: " + (getResultMargin() + -currentResult * (365 + 50) - 1) + "px;"
         document.getElementsByClassName("l-result-page")[0].
         innerHTML = (1 + currentResult) + "/" + resultList.length 
     }
@@ -89,7 +96,7 @@ window.addEventListener("DOMContentLoaded", (e) =>  {
     resultList.map((result, index) => {
         let style = ""
         if (index === 0) {
-            style = ` style="margin-left: 250px;"`
+            style = ` style="margin-left: ` + getResultMargin() +`px;"`
         }
 
         document.getElementsByClassName("l-result-container")[0].
@@ -129,12 +136,13 @@ window.addEventListener("DOMContentLoaded", (e) =>  {
             innerHTML = `
                 <a href="#" class="l-news-article-slide">
                     <span class="l-news-article-slide-date">
-                    ` + newsList[newsCounter % newsList.length].date +`
+                    ` + newsList[newsCounter % newsList.length].date +`fff
                     </span>
-                    <div class="l-news-article-slide-txt">
-                        ` + newsList[newsCounter % newsList.length].text +`
-                    </div>
-                    <div class="l-news-article-slide-more">
+                    <div class="l-news-article-slide-block">
+                        <div class="l-news-article-slide-txt">
+                            ` + newsList[newsCounter % newsList.length].text +`
+                        </div>
+                        <div class="l-news-article-slide-more"></div>
                     </div>
                 </a>
             `
