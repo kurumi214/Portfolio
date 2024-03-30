@@ -212,7 +212,7 @@
             </div>
 
             <!-- banner1 -->
-            <div class="c-link-bnr">
+            <div class="c-link-bnr" id="banner-1">
                 <div class="c-link-bnr-copy">
                     fixing!ならムズカシイ手続きなしで<br>
                     修理ができます！
@@ -497,7 +497,7 @@
             </div>
 
             <!-- banner2 -->
-            <div class="c-link-bnr">
+            <div class="c-link-bnr" id="banner-2">
                 <div class="c-link-bnr-copy">
                     料金とサービス。<br>
                     ぜひご覧ください。
@@ -560,14 +560,17 @@
                 <div class="l-footer-menu">
 
                     <div class="l-footer-menu-col">
-                        <div class="l-footer-menu-col-ttl">
+                        <div
+                            class="l-footer-menu-col-ttl"
+                            onclick="toggleFooter('footer-1')"
+                            >
                             <div class="l-footer-menu-col-top">
                                 <img class="l-footer-menu-col-top-arrow" src="./images/icon/arrow-right-circle.svg" alt="矢印">
                                 はじめての方
                             </div>
                             <span>取扱説明書</span>
                         </div>
-                        <ul class="l-footer-menu-col-li">
+                        <ul class="l-footer-menu-col-li" id="footer-1">
                             <li class="l-footer-menu-col-li-item">
                                 <a href="#">はじめに</a>
                             </li>
@@ -593,20 +596,23 @@
                                 <a href="#">キャンセル方法</a>
                             </li>
                             <li class="l-footer-menu-col-li-item">
-                                <a href="#">F&Q</a>
+                                <a href="#">Q&A</a>
                             </li>
                         </ul>
                     </div>
 
                     <div class="l-footer-menu-col">
-                        <div class="l-footer-menu-col-ttl">
+                        <div
+                            class="l-footer-menu-col-ttl"
+                            onclick="toggleFooter('footer-2')"
+                            >
                             <div class="l-footer-menu-col-top">
                                 <img class="l-footer-menu-col-top-arrow" src="./images/icon/arrow-right-circle.svg" alt="矢印">
-                                サービスについて
+                                サービス
                             </div>
                             <span>Fixing!の特徴</span>
                         </div>
-                        <ul class="l-footer-menu-col-li">
+                        <ul class="l-footer-menu-col-li" id="footer-2">
                             <li class="l-footer-menu-col-li-item">
                                 <a href="#">修理実績</a>
                             </li>
@@ -620,7 +626,7 @@
                     </div>
 
                     <div class="l-footer-menu-col">
-                        <ul class="l-footer-menu-col-li">
+                        <ul class="l-footer-menu-col-lin l-footer-menu-col-li-active">
                             <li class="l-footer-menu-col-li-item">
                                 <a href="#">店舗一覧</a>
                             </li>
@@ -639,7 +645,7 @@
                             <li class="l-footer-menu-col-sub-li-item">
                                 <a href="#">個人情報保護方針</a>
                             </li>
-                            <li class="l-footer-menu-col-li-item">
+                            <li class="l-footer-menu-col-sub-li-item">
                                 <a href="#">プライバシーポリシー</a>
                             </li>
                         </ul>

@@ -164,3 +164,20 @@ window.onscroll = (e) => {
     }
 
 }
+
+///// Footer helper function
+function toggleFooter(id) {
+    console.log(id)
+
+    // 1st Get element by ID
+    const Element = document.getElementById(id)
+
+    // 2nd check that className if it is active
+    if (Element.className === "l-footer-menu-col-li l-footer-menu-col-li-active") {
+        // 3rd remove active from the class name
+        Element.className = "l-footer-menu-col-li"
+    } else {
+        //4th if not active add it
+        Element.className += " l-footer-menu-col-li-active"
+    }
+}

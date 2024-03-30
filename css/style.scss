@@ -29,6 +29,41 @@ html {
 }
 
 ////// component//////
+//header
+.c-nav-logo {
+    img {
+        object-fit: contain;
+        height: 60px;
+
+        @media (max-width: 767px) {
+            width: 90px;
+        }
+    }
+}
+.c-my-page-login {
+    cursor: pointer;
+    margin-left: 20px;
+
+    @media (max-width: 767px) {
+        margin-left: 5px;
+    }
+    img {
+        object-fit: contain;
+        height: 40px;
+        @media (max-width: 767px) {
+            width: 33px;
+        }
+    }
+    span {
+        display: block;
+        font-size: 10px;
+        &:hover {
+            color: #2da559;
+        }
+    }
+}
+
+//banner
 .c-link-bnr {
     padding: 0 100px;
     height: 480px;
@@ -54,12 +89,26 @@ html {
         font-size: 15px;
         line-height: 2;
     }
-    img {
-        object-fit: contain;
-        height: 500px;
-        float: right;
+}
+#banner-1 {
+    background-image: url("../images/banner1.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+    @media (max-width: 767px) {
+        background-image: none;
     }
 }
+#banner-2 {
+    background-image: url("../images/banner2.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    @media (max-width: 767px) {
+        background-image: none;
+    }
+}
+
 .c-title {
     padding: 0 60px;
     font-size: 50px;
@@ -80,6 +129,7 @@ html {
     }
 }
 
+// button
 .c-link-btn {
     width: fit-content;
     margin: 60px auto;
@@ -144,41 +194,6 @@ html {
 
 
 ////// header//////
-// left side
-.c-nav-logo {
-    img {
-        object-fit: contain;
-        height: 60px;
-
-        @media (max-width: 767px) {
-            height: 60px;
-            width: 120px;
-        }
-    }
-}
-.c-my-page-login {
-    cursor: pointer;
-    margin-left: 20px;
-
-    @media (max-width: 767px) {
-        margin-left: 5px;
-    }
-    img {
-        object-fit: contain;
-        height: 40px;
-        @media (max-width: 767px) {
-            height: 37px;
-            width: 37px;
-        }
-    }
-    span {
-        display: block;
-        font-size: 10px;
-        &:hover {
-            color: #2da559;
-        }
-    }
-}
 // header nav
 .l-header {
     height: 90px;
@@ -376,6 +391,10 @@ html {
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid black;
+    @media (max-width: 767px) {
+        display: block;
+        text-align: center;
+    }
     &-copy {
         font-size: 26px;
         font-weight: 900;
@@ -383,6 +402,9 @@ html {
             text-decoration: underline;
             text-decoration-thickness: 3px;
             text-underline-offset: 6px;
+        }
+        @media (max-width: 767px) {
+            margin-bottom: 20px;
         }
     }
     &-items {
@@ -794,7 +816,6 @@ html {
         transition: all 0.3s ease-in-out;
         cursor: pointer;
 
-
         @media (max-width: 767px) {
             padding-bottom: 100px;
         }
@@ -830,6 +851,9 @@ html {
         }
         &-date {
             margin: 20px 20px 0 0;
+            @media (max-width: 767px) {
+                margin: 10px 10px 0 10px;
+            }
         }
         &-top {
             display: flex;
@@ -874,6 +898,9 @@ html {
         font-weight: 900;
         width: max-content;
         transition: all ease-in-out;
+        @media (max-width: 767px) {
+            font-size: 92px;
+        }
     }
     &-txt {
         margin: 40px 0 100px 80px;
@@ -895,10 +922,35 @@ html {
 
         &-col {
             padding: 60px 0 0 60px;
-            min-width: calc(100% / 4) ;
+
+            @media (max-width: 767px) {
+                padding: 2em 0 0 0;
+                margin: 0 2em;
+            }
+            min-width: calc(100% / 4);
             &-ttl {
                 span {
                     color: #7d7c7c;
+                }
+                @media (max-width: 767px) {
+                    -webkit-backface-visibility: hidden;
+                    backface-visibility: hidden;
+                    transform: translateZ(0);
+                    transition: all 0.3s;
+                    &::after,
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        right: 1.25em;
+                        top: 1.25em;
+                        width: 2px;
+                        height: 0.75em;
+                        background-color: #999;
+                        transition: all 0.3s;
+                    }
+                    &::after {
+                        transform: rotate(90deg);
+                    }
                 }
             }
             &-top {
@@ -908,18 +960,39 @@ html {
                 &-arrow {
                     position: absolute;
                     transform: translateX(-30px);
+                    @media (max-width: 767px) {
+                        display: none;
+                    }
                 }
             }
             &-li {
                 line-height: 2;
-            }
-            ul  {
                 margin: 0;
                 padding: 0;
                 -webkit-padding-start: 0;
+                &-item {
+                    margin-bottom:10px;
+                    padding:0 20px;
+                    overflow: hidden;
+                }
+                @media (max-width: 767px) {
+                    transition: all 0.3s;
+                    max-height: 0;
+                    overflow: hidden;
+                }
+
+                &-active {
+                    max-height: unset !important;
+                }
             }
         }
     }
+}
+.toggle {
+    display: none;
+}
+.toggle:checked + .l-footer-menu-col-top-arrow {
+    background-color: red;
 }
 /// 
 .p-footer {
@@ -928,8 +1001,14 @@ html {
     flex-direction: row;
     justify-content: space-between;
     padding: 40px 60px;
+    @media (max-width: 767px) {
+        padding: 20px;
+    }
     &-logo img {
         width: 65%;
+        @media (max-width: 767px) {
+            width: 71px;
+        }
     }
     &-item {
         display: flex;
@@ -959,5 +1038,8 @@ html {
         font-weight: 600;
         display: flex;
         align-items: flex-end;
+        @media (max-width: 767px) {
+            margin-left: 10px;
+        }
     }
 }
