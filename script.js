@@ -136,7 +136,7 @@ window.addEventListener("DOMContentLoaded", (e) =>  {
             innerHTML = `
                 <a href="#" class="l-news-article-slide">
                     <span class="l-news-article-slide-date">
-                    ` + newsList[newsCounter % newsList.length].date +`fff
+                    ` + newsList[newsCounter % newsList.length].date +`
                     </span>
                     <div class="l-news-article-slide-block">
                         <div class="l-news-article-slide-txt">
@@ -167,8 +167,6 @@ window.onscroll = (e) => {
 
 ///// Footer helper function
 function toggleFooter(id) {
-    console.log(id)
-
     // 1st Get element by ID
     const Element = document.getElementById(id)
 
@@ -179,5 +177,14 @@ function toggleFooter(id) {
     } else {
         //4th if not active add it
         Element.className += " l-footer-menu-col-li-active"
+    }
+}
+///// hamburger menu
+function toggleBurger() {
+    const Element = document.getElementById("menu")
+    if (Element.className === "l-menu l-menu-active") {
+        Element.className = "l-menu"
+    } else {
+        Element.className += " l-menu-active"
     }
 }

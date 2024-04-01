@@ -55,10 +55,140 @@
                 <div class="l-nav-more-price">
                     <a href="#">今すぐお見積もり</a>
                 </div>
-                <div class="l-nav-more-menu">
+                <div class="l-nav-more-menu" 
+                        onclick="toggleBurger()">
                     <span></span>
                     <span></span>
                     <span></span>
+                </div>
+            </div>
+
+            <!-- hamburger menu -->
+            <div class="l-menu" id="menu">
+                <div class="l-footer l-menu-footer">
+                    <div class="l-footer-menu">
+    
+                        <div class="l-footer-menu-col">
+                            <div
+                                class="l-footer-menu-col-ttl"
+                                onclick="toggleFooter('footer-menu-1')"
+                                >
+                                <div class="l-footer-menu-col-top">
+                                    <img class="l-footer-menu-col-top-arrow" src="./images/icon/arrow-right-circle.svg" alt="矢印">
+                                    はじめての方
+                                </div>
+                                <span>取扱説明書</span>
+                            </div>
+                            <ul class="l-footer-menu-col-li" id="footer-menu-1">
+                                <li class="l-footer-menu-col-li-item">
+                                    <a href="#">はじめに</a>
+                                </li>
+                                <li class="l-footer-menu-col-li-item">
+                                    <a href="#">ご料金案内</a>
+                                </li>
+                                <li class="l-footer-menu-col-li-item">
+                                    <a href="#">発送セット</a>
+                                </li>
+                                <li class="l-footer-menu-col-li-item">
+                                    <a href="#">Myページ</a>
+                                </li>
+                                <li class="l-footer-menu-col-li-item">
+                                    <a href="#">保証サービス</a>
+                                </li>
+                                <li class="l-footer-menu-col-li-item">
+                                    <a href="#">お支払い方法</a>
+                                </li>
+                                <li class="l-footer-menu-col-li-item">
+                                    <a href="#">配送方法</a>
+                                </li>
+                                <li class="l-footer-menu-col-li-item">
+                                    <a href="#">キャンセル方法</a>
+                                </li>
+                                <li class="l-footer-menu-col-li-item">
+                                    <a href="#">Q&A</a>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="l-footer-menu-col">
+                            <div
+                                class="l-footer-menu-col-ttl"
+                                onclick="toggleFooter('footer-menu-2')"
+                                >
+                                <div class="l-footer-menu-col-top">
+                                    <img class="l-footer-menu-col-top-arrow" src="./images/icon/arrow-right-circle.svg" alt="矢印">
+                                    サービス概要
+                                </div>
+                                <span>Fixing!の特徴</span>
+                            </div>
+                            <ul class="l-footer-menu-col-li" id="footer-menu-2">
+                                <li class="l-footer-menu-col-li-item">
+                                    <a href="#">修理実績</a>
+                                </li>
+                                <li class="l-footer-menu-col-li-item">
+                                    <a href="#">アフターサービス</a>
+                                </li>
+                                <li class="l-footer-menu-col-li-item">
+                                    <a href="#">企業さま向け修理</a>
+                                </li>
+                            </ul>
+                        </div>
+    
+                        <div class="l-footer-menu-col">
+                            <ul class="l-footer-menu-col-li l-footer-menu-col-li-active">
+                                <li class="l-footer-menu-col-li-item">
+                                    <a href="#">店舗一覧</a>
+                                </li>
+                                <li class="l-footer-menu-col-li-item">
+                                    <a href="#">お問合せ</a>
+                                </li>
+                                <li class="l-footer-menu-col-li-item">
+                                    <a href="#">お知らせ</a>
+                                </li>
+                                <li class="l-footer-menu-col-li-item">
+                                    <a href="#">運営会社</a>
+                                </li>
+                            </ul>
+    
+                            <ul class="l-footer-menu-col-li-sub">
+                                <li class="l-footer-menu-col-sub-li-item">
+                                    <a href="#">個人情報保護方針</a>
+                                </li>
+                                <li class="l-footer-menu-col-sub-li-item">
+                                    <a href="#">プライバシーポリシー</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="l-header-nav-li-item l-header-nav-li-item-btn l-menu-btn">
+                        <a href="#"><span data-text="あんしん保険">あんしん保険</span></a>
+                    </div>
+                    <div class="l-header-nav-li-item l-header-nav-li-item-btn l-menu-btn">
+                        <a href="#"><span data-text="企業様さま向け修理">企業様さま向け修理</span></a>
+                    </div>
+                    <div class="p-footer l-menu-header">
+                        <div class="p-footer-item">
+                            <div class="p-footer-logo">
+                                <img src="./images/logo_200x200.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="p-footer">
+                        <div class="p-footer-item">
+                            <div class="p-footer-icon-list">
+                                <div class="p-footer-icon">
+                                    <img src="./images/icon/instagram.svg" alt="Instagram">
+                                </div>
+                                <div class="p-footer-icon">
+                                    <img src="./images/icon/facebook.svg" alt="Facebook">
+                                </div>
+                                <div class="p-footer-icon">
+                                    <img src="images/icon/x-logo.svg" alt="x">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 
@@ -153,7 +283,7 @@
             <!-- problem -->
             <div class="l-problem">
                 <div class="l-problem-container">
-                    <div class="l-problem-col">
+                    <div class="l-problem-col" style="z-index: 5;">
                         <div class="l-problem-col-txt">
                             修理に出したいけど<br>
                             なかなか踏み出せない<br>
@@ -163,7 +293,7 @@
                         <div class="l-problem-col-img">
                         </div>
                     </div>
-                    <div class="l-problem-col">
+                    <div class="l-problem-col" style="z-index: 6;">
                         <div class="l-problem-col-txt">
                             画面が割れてしまった<br>
                             リモコンのボタンが効かなくなった
@@ -172,7 +302,7 @@
                             <img src="./images/problem1.png" alt="スマートフォン">
                         </div>
                     </div>
-                    <div class="l-problem-col">
+                    <div class="l-problem-col" style="z-index: 7;">
                         <div class="l-problem-col-txt">
                             忙しくて時間がない！<br>
                             すぐに修理を終わらせたい
@@ -181,7 +311,7 @@
                             <img src="./images/probrem2.png" alt="サラリーマン">
                         </div>
                     </div>
-                    <div class="l-problem-col">
+                    <div class="l-problem-col" style="z-index: 8;">
                         <div class="l-problem-col-txt">
                             近所に修理店がない<br>
                             わざわざ店舗に行くのは面倒
@@ -190,7 +320,7 @@
                             <img src="./images/problem3.png" alt="マップ">
                         </div>
                     </div>
-                    <div class="l-problem-col">
+                    <div class="l-problem-col" style="z-index: 9;">
                         <div class="l-problem-col-txt">
                             何台か修理に出したいけど<br>
                             重くて持っていくのが大変
@@ -199,7 +329,7 @@
                             <img src="./images/problem4.png" alt="荷物">
                         </div>
                     </div>
-                    <div class="l-problem-col">
+                    <div class="l-problem-col" style="z-index: 10;">
                         <div class="l-problem-col-txt">
                             大事なデータを残したい！復旧したい！<br>
                             自分でするのは怖いので、プロに任せたい
@@ -608,7 +738,7 @@
                             >
                             <div class="l-footer-menu-col-top">
                                 <img class="l-footer-menu-col-top-arrow" src="./images/icon/arrow-right-circle.svg" alt="矢印">
-                                サービス
+                                サービス概要
                             </div>
                             <span>Fixing!の特徴</span>
                         </div>
@@ -626,7 +756,7 @@
                     </div>
 
                     <div class="l-footer-menu-col">
-                        <ul class="l-footer-menu-col-lin l-footer-menu-col-li-active">
+                        <ul class="l-footer-menu-col-li l-footer-menu-col-li-active">
                             <li class="l-footer-menu-col-li-item">
                                 <a href="#">店舗一覧</a>
                             </li>

@@ -157,7 +157,7 @@ html {
     }
 }
 .c-link-btn:hover {
-    margin-top: 63px;
+    margin-top: 62px;
     background: #2da559;
     border-bottom: 3px solid #217d43;
 }
@@ -286,7 +286,7 @@ html {
 
 
 .l-nav-more {
-    z-index: 100;
+    z-index: 9999999999;
     top: 0px;
     right: 0px;
     height: 90px;
@@ -347,6 +347,38 @@ html {
             height: 60px;
             width: 60px;
         }
+    }
+}
+
+//l-menu
+.l-menu {
+    display: none;
+    z-index: 999999999;
+
+    &-active {
+        display: block;
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        min-height: 100vh;
+    }
+    &-footer {
+        padding-top: 85px;
+        line-height: 41px;
+    }
+    
+    &-btn {
+        display: none;
+        @media (max-width: 767px) {
+            display: unset;
+            margin: 0 10px 0 20px;
+        }
+    }
+    &-header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
     }
 }
 
@@ -559,18 +591,28 @@ html {
 .l-problem {
     outline: 1px solid  rgb(137, 137, 137); 
     outline-offset: -1px;
+    position: relative;
     &-container {
         display: grid;
         grid-template-columns: repeat(3, calc(100vw / 3));
         grid-auto-rows: 430px;
         @media (max-width: 767px) {
             display: block;
+            height: 500px;
+            overflow-y: auto;
         }
     }
     &-col {
         padding: 40px 0;
         text-align: center;
         border: 1px dashed rgb(137, 137, 137); 
+        @media (max-width: 767px) {
+            position: sticky;
+            top: 0;
+            height: 500px;
+            width: 100%;
+            background-color: white;
+        }
         &-txt {
             text-align: center;
             line-height: 2;
@@ -913,6 +955,7 @@ html {
 ////// footer//////
 .l-footer {
     background-color: #f2f2f2;
+    height: 100%;
     &-menu {
         display: flex;
 
@@ -921,7 +964,7 @@ html {
         }
 
         &-col {
-            padding: 60px 0 0 60px;
+            padding: 60px 0 0 90px;
 
             @media (max-width: 767px) {
                 padding: 2em 0 0 0;
@@ -972,8 +1015,10 @@ html {
                 -webkit-padding-start: 0;
                 &-item {
                     margin-bottom:10px;
-                    padding:0 20px;
                     overflow: hidden;
+                }
+                &-sub {
+                    padding: 0;
                 }
                 @media (max-width: 767px) {
                     transition: all 0.3s;
