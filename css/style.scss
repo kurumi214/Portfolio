@@ -31,6 +31,7 @@ html {
 ////// component//////
 //header
 .c-nav-logo {
+    cursor: pointer;
     img {
         object-fit: contain;
         height: 60px;
@@ -65,7 +66,7 @@ html {
 
 //banner
 .c-link-bnr {
-    padding: 0 100px;
+    padding: 0 60px;
     height: 480px;
     display: flex;
     justify-content: space-between;
@@ -78,7 +79,7 @@ html {
         justify-content: space-evenly;
     }
     &-copy {
-        font-size: 50px;
+        font-size: 60px;
         font-weight: 900;
         @media (max-width: 767px) {
             font-size: 30px;
@@ -86,8 +87,11 @@ html {
     }
     &-txt {
         margin: 20px 0 0 0;
-        font-size: 15px;
+        font-size: 20px;
         line-height: 2;
+        @media (max-width: 767px) {
+            font-size: 14px;
+        }
     }
 }
 #banner-1 {
@@ -109,9 +113,10 @@ html {
     }
 }
 
-.c-title {
+.c-title {    
+    margin-bottom: 20px;
     padding: 0 60px;
-    font-size: 50px;
+    font-size: 60px;
     font-weight: 900;
     color: #2da559;
     @media (max-width: 767px) {
@@ -120,7 +125,7 @@ html {
     }
     span {
         display: block;
-        font-size: 26px;
+        font-size: 30px;
         font-weight: 900;
         color: black;
         @media (max-width: 767px) {
@@ -257,6 +262,11 @@ html {
                 padding: 10px 20px; 
                 text-decoration: none;
                 border-radius: 30px;
+                @media (max-width: 767px) {
+                    font-size: 14px;
+                    padding: 10px 10px;
+                    line-height: normal;
+                }
             }
         }
     }
@@ -298,6 +308,7 @@ html {
         height: 60px;
     }
     &-price {
+        cursor: pointer;
         width: 220px;
         padding: 30px 0;
         text-align: center;
@@ -312,6 +323,7 @@ html {
         }
     }
     &-menu {
+        cursor: pointer;
         width: 90px;
         height: 90px;
         flex-direction: column;
@@ -369,9 +381,14 @@ html {
     
     &-btn {
         display: none;
+        &-wrap {
+            display: flex;
+        }
+        &-1 {
+            margin-left: 2rem;
+        }
         @media (max-width: 767px) {
             display: unset;
-            margin: 0 10px 0 20px;
         }
     }
     &-header {
@@ -384,6 +401,7 @@ html {
 
 ////// hero//////
 .l-hero-carousel {
+    cursor: grab;
     display: flex; 
     overflow: hidden; 
     margin: 0 auto; 
@@ -501,15 +519,18 @@ html {
         padding: 20px;
     }
     &-btn {
+        cursor: pointer;
         width: fit-content;
-        border: 1px solid black; 
-        padding: 6px 12px; 
+        border: 2px solid black;
+        padding: 6px 12px;
         text-decoration: none;
         border-radius: 30px;
         font-size: 14px;
+        font-weight: 600;
         margin-left: auto;
     }
     &-container {
+        position: relative;
         margin-top: 30px;
         width: 100%;
         display: flex;
@@ -542,13 +563,13 @@ html {
             }
 
             &-block {
+                margin-left: 25px;
                 display: block;
                 * {
                     display: table-cell;
                 }
             }
             &-txt {
-                margin-left: 25px;
                 @media (max-width: 767px) {
                     margin: 0;
                 }
@@ -558,6 +579,8 @@ html {
                 width: 24px;
                 &::after{
                     content: "";
+                    position: absolute;
+                    top: 13%;
                     margin-left: 2em;
                     height: 24px;
                     width: 24px;
@@ -639,7 +662,6 @@ html {
 .l-service {
     margin-top: 100px;
     &-container {
-        margin-top: 30px;
         outline: 1px solid rgb(220, 219, 219);
         outline-offset: -1px;
         display: grid;
@@ -680,6 +702,7 @@ html {
     margin-top: 100px;
     &-container {
         margin-top: 30px;
+        padding-left: 60px;
         display: grid;
         grid-template-columns: repeat(2, calc(100vw / 2));
         @media (max-width: 767px) {
@@ -689,7 +712,6 @@ html {
     &-col {
         min-height: 650px;
         position: relative;
-        padding-left: 50px;
         @media (max-width: 767px) {
             padding-left: 20px;
             min-height: 487px;
@@ -752,7 +774,6 @@ html {
 
 ////// flow//////
 .l-flow {
-    margin-top: 60px;
     padding-top: 60px;
     border-top: 1px solid black;
 
@@ -1013,9 +1034,16 @@ html {
                 margin: 0;
                 padding: 0;
                 -webkit-padding-start: 0;
+                font-weight: 600;
                 &-item {
                     margin-bottom:10px;
                     overflow: hidden;
+                    a {
+                        cursor: pointer;
+                        &:hover {
+                            color: #2da559;
+                        }
+                    }
                 }
                 &-sub {
                     padding: 0;
@@ -1086,5 +1114,12 @@ html {
         @media (max-width: 767px) {
             margin-left: 10px;
         }
+    }
+}
+
+.p-break {
+    display: none;
+    @media (max-width: 767px) {
+        display: block;
     }
 }

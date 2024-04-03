@@ -184,7 +184,9 @@ function toggleBurger() {
     const Element = document.getElementById("menu")
     if (Element.className === "l-menu l-menu-active") {
         Element.className = "l-menu"
+        document.body.style.overflow = 'auto';
     } else {
         Element.className += " l-menu-active"
+        document.body.style.overflow = 'hidden';
     }
 }
