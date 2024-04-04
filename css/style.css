@@ -30,6 +30,24 @@ html {
   box-sizing: border-box;
 }
 
+div {
+  cursor: default;
+}
+
+.c-break {
+  display: none;
+}
+@media (max-width: 767px) {
+  .c-break {
+    display: block;
+  }
+}
+@media (min-width: 768px) {
+  .c-break-pc {
+    display: block;
+  }
+}
+
 .c-nav-logo {
   cursor: pointer;
 }
@@ -245,7 +263,12 @@ html {
 }
 @media (max-width: 767px) {
   .l-header-nav {
+    z-index: 9999999999;
     padding: 7px;
+    height: 60px;
+    position: fixed;
+    border-bottom: 1px solid black;
+    background-color: white;
   }
 }
 .l-header-logo {
@@ -391,9 +414,19 @@ html {
   width: 100vw;
   min-height: 100vh;
 }
+@media (max-width: 767px) {
+  .l-menu-active {
+    inset: unset;
+  }
+}
 .l-menu-footer {
   padding-top: 85px;
   line-height: 41px;
+}
+@media (max-width: 767px) {
+  .l-menu-footer {
+    padding-top: 15px;
+  }
 }
 .l-menu-btn {
   display: none;
@@ -756,11 +789,13 @@ html {
 @media (max-width: 767px) {
   .l-feature-container {
     display: block;
+    padding-left: 0;
   }
 }
 .l-feature-col {
   min-height: 650px;
   position: relative;
+  padding: 0 0 20px 20px;
 }
 @media (max-width: 767px) {
   .l-feature-col {
@@ -780,14 +815,13 @@ html {
   }
 }
 .l-feature-col-img img {
-  margin-left: 20px;
   height: 444px;
-  width: 444px;
+  width: 80%;
   -o-object-fit: cover;
      object-fit: cover;
   position: absolute;
+  right: 0;
   top: 0;
-  left: 20%;
   animation: loaded 1.3s cubic-bezier(0.19, 1, 0.22, 1) 1s both;
 }
 @media (max-width: 767px) {
@@ -943,7 +977,7 @@ html {
   background-color: #2da559;
 }
 .l-result-col:first-child {
-  cursor: unset;
+  cursor: pointer;
   position: absolute;
   height: 100%;
   width: 200px;
@@ -986,6 +1020,7 @@ html {
   height: 20px;
 }
 .l-result-col-ttl {
+  cursor: pointer;
   margin-top: 40px;
   font-weight: 600;
   font-size: 20px;
@@ -1029,7 +1064,7 @@ html {
 
 .l-footer {
   background-color: #f2f2f2;
-  height: 100%;
+  height: 100vh;
 }
 .l-footer-menu {
   display: flex;
@@ -1142,13 +1177,18 @@ html {
 }
 @media (max-width: 767px) {
   .p-footer-logo img {
-    width: 71px;
+    display: none;
   }
 }
 .p-footer-item {
   display: flex;
   gap: 3em;
   align-items: center;
+}
+@media (max-width: 767px) {
+  .p-footer-item {
+    gap: 0;
+  }
 }
 .p-footer-icon {
   height: 24px;
@@ -1175,14 +1215,5 @@ html {
 @media (max-width: 767px) {
   .p-footer small {
     margin-left: 10px;
-  }
-}
-
-.p-break {
-  display: none;
-}
-@media (max-width: 767px) {
-  .p-break {
-    display: block;
   }
 }/*# sourceMappingURL=style.css.map */

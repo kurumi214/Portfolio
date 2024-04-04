@@ -349,7 +349,7 @@
      border: 2px inset;
      -webkit-rtl-ordering: logical;
      -webkit-user-select: text;
-     cursor: auto;
+     cursor: default;
  }
  input[type="search" i] {
      -webkit-appearance: searchfield;
@@ -435,7 +435,7 @@
      -webkit-user-select: text;
      flex-direction: column;
      resize: auto;
-     cursor: auto;
+     cursor: default;
      padding: 2px;
      white-space: pre-wrap;
      word-wrap: break-word;
@@ -834,7 +834,7 @@
  }
      
  a:-webkit-any-link {
-     cursor: auto;
+     cursor: pointer;
  }
  a:-webkit-any-link:active {
      color: -webkit-activelink
