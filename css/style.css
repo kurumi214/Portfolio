@@ -196,6 +196,7 @@ div {
   color: white;
 }
 .c-link-btn-txt span {
+  cursor: pointer;
   margin-right: 30px;
   font-size: 18px;
   color: white;
@@ -229,13 +230,12 @@ div {
   font-weight: 600;
 }
 .c-link-btn-price-txt {
+  cursor: pointer;
   color: #000;
-  margin: 15px 30px;
 }
 .c-link-btn-price-txt span {
   font-size: 20px;
   font-weight: 600;
-  color: white;
 }
 
 .c-link-btn-price:hover {
@@ -1065,6 +1065,15 @@ div {
 .l-footer {
   background-color: #f2f2f2;
   height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media (max-width: 767px) {
+  .l-footer {
+    padding-top: 15px;
+  }
 }
 .l-footer-menu {
   display: flex;
@@ -1072,6 +1081,7 @@ div {
 @media (max-width: 767px) {
   .l-footer-menu {
     flex-direction: column;
+    overflow: auto;
   }
 }
 .l-footer-menu-col {
