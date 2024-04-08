@@ -1091,7 +1091,7 @@ div {
 }
 @media (max-width: 767px) {
   .l-footer-menu-col {
-    padding: 0 0 0 0;
+    padding: 0;
     margin: 0 2em;
   }
   .l-footer-menu-col:first-child {
