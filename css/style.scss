@@ -1010,7 +1010,8 @@ div {
     justify-content: center;
 
     @media (max-width: 767px) {
-        padding-top: 15px;
+        padding-top: 35px;
+        justify-content: unset;
     }
     &-menu {
         display: flex;
@@ -1024,8 +1025,11 @@ div {
             padding: 60px 0 0 90px;
 
             @media (max-width: 767px) {
-                padding: 2em 0 0 0;
+                padding: 0 0 0 0;
                 margin: 0 2em;
+                &:first-child {
+                    margin-bottom: 20px;
+                }
             }
             min-width: calc(100% / 4);
             &-ttl {
@@ -1111,7 +1115,7 @@ div {
     justify-content: space-between;
     padding: 40px 60px;
     @media (max-width: 767px) {
-        padding: 20px;
+        display: none;
     }
     &-logo img {
         width: 65%;

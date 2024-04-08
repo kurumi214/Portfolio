@@ -1072,7 +1072,8 @@ div {
 }
 @media (max-width: 767px) {
   .l-footer {
-    padding-top: 15px;
+    padding-top: 35px;
+    justify-content: unset;
   }
 }
 .l-footer-menu {
@@ -1090,8 +1091,11 @@ div {
 }
 @media (max-width: 767px) {
   .l-footer-menu-col {
-    padding: 2em 0 0 0;
+    padding: 0 0 0 0;
     margin: 0 2em;
+  }
+  .l-footer-menu-col:first-child {
+    margin-bottom: 20px;
   }
 }
 .l-footer-menu-col-ttl span {
@@ -1179,7 +1183,7 @@ div {
 }
 @media (max-width: 767px) {
   .p-footer {
-    padding: 20px;
+    display: none;
   }
 }
 .p-footer-logo img {
