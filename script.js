@@ -75,11 +75,17 @@ window.addEventListener("DOMContentLoaded", (e) =>  {
         return 250
     }
 
+    let getElementSize = () => {
+        if (window.innerWidth < 365)
+            return window.innerWidth
+        return 369
+    }
+
     document.onNextBtn = () => {
         currentResult++
         if (currentResult > (resultList.length - 1))
             currentResult = 0
-        document.getElementById("result-0").style = "margin-left: " + (getResultMargin() + -currentResult * (365 + 50) - 1) + "px;"
+        document.getElementById("result-0").style = "margin-left: " + (getResultMargin() + -currentResult * (getElementSize() + 50) - 1) + "px;"
         document.getElementsByClassName("l-result-page")[0].
         innerHTML = (1 + currentResult) + "/" + resultList.length 
     }
@@ -87,7 +93,7 @@ window.addEventListener("DOMContentLoaded", (e) =>  {
         currentResult--
         if (currentResult < 0)
             currentResult = (resultList.length - 1)
-        document.getElementById("result-0").style = "margin-left: " + (getResultMargin() + -currentResult * (365 + 50) - 1) + "px;"
+        document.getElementById("result-0").style = "margin-left: " + (getResultMargin() + -currentResult * (getElementSize() + 50) - 1) + "px;"
         document.getElementsByClassName("l-result-page")[0].
         innerHTML = (1 + currentResult) + "/" + resultList.length 
     }

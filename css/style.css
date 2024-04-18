@@ -962,7 +962,7 @@ div {
   display: inline-block;
 }
 .l-result-col {
-  width: 365px;
+  width: 100%;
   max-width: 365px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
@@ -1014,7 +1014,7 @@ div {
 }
 .l-result-col-top img {
   height: 500px;
-  width: 300px;
+  width: min(300px, 100vw - 70px);
   -o-object-fit: cover;
      object-fit: cover;
 }
