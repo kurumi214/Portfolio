@@ -962,7 +962,7 @@ div {
   display: inline-block;
 }
 .l-result-col {
-  width: 100%;
+  min-width: 365px;
   max-width: 365px;
   transition: all 0.3s ease-in-out;
   cursor: pointer;
@@ -989,6 +989,7 @@ div {
   justify-content: center;
   align-items: flex-end;
   padding-bottom: 6em;
+  min-width: unset;
 }
 @media (max-width: 767px) {
   .l-result-col:first-child {

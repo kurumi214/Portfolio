@@ -71,14 +71,14 @@ window.addEventListener("DOMContentLoaded", (e) =>  {
 
     let getResultMargin = () => {
         if (window.innerWidth < 767)
-            return 0
+            return 15
         return 250
     }
 
     let getElementSize = () => {
         if (window.innerWidth < 365)
             return window.innerWidth
-        return 369
+        return 365
     }
 
     document.onNextBtn = () => {
