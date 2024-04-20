@@ -1015,7 +1015,7 @@ div {
 }
 .l-result-col-top img {
   height: 500px;
-  width: min(300px, 100vw - 70px);
+  width: min(295px, 100vw - 70px);
   -o-object-fit: cover;
      object-fit: cover;
 }
